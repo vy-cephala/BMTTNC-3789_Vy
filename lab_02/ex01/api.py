@@ -1,29 +1,26 @@
 from flask import Flask, request, jsonify
-from cipher.vigenere import VigenereCipher
-
+from cipher.transposition import TranspositionCipher
 
 app = Flask(__name__)
-# VIGENERE CIPHER ALGORITHM
-vigenere_cipher = VigenereCipher()
 
-@app.route('/api/vigenere/encrypt', methods=['POST'])
-def vigenere_encrypt():
-    data = request.json
-    plaintext = data['plain_text']
-    key = data['key']
-    encrypted_text = vigenere_cipher.vigenere_encrypt(plaintext, key)
-    return jsonify({"encrypted_text": encrypted_text})
+# TRANSPOSITION CIPHER ALGORITHM
+transposition_cipher = TranspositionCipher()
 
-@app.route('/api/vigenere/decrypt', methods=['POST'])
-def vigenere_decrypt():
-    data = request.json
-    cipher_text = data['cipher_text']
-    key = data['key']
+@app.route('/api/transposition/encrypt', methods=['POST'])
+def transposition_encrypt():
+    data = request.get_json()
+    plain_text = data.get('plain_text')
+    key = int(data.get('key'))
+    encrypted_text = transposition_cipher.encrypt(plain_text, key)
+    return jsonify({'encrypted_text': encrypted_text})
 
-    decrypted_text = vigenere_cipher.vigenere_decrypt(cipher_text, key)
-
+@app.route('/api/transposition/decrypt', methods=['POST'])
+def transposition_decrypt():
+    data = request.get_json()
+    cipher_text = data.get('cipher_text')
+    key = int(data.get('key'))
+    decrypted_text = transposition_cipher.decrypt(cipher_text, key)
     return jsonify({'decrypted_text': decrypted_text})
 
-# Main function
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
