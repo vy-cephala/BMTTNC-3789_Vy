@@ -9,8 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import os
-os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "../platforms"
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -32,24 +31,24 @@ class Ui_MainWindow(object):
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
         self.label_3.setGeometry(QtCore.QRect(40, 290, 91, 21))
         self.label_3.setObjectName("label_3")
-        self.txtplaintext = QtWidgets.QPlainTextEdit(self.centralwidget)
-        self.txtplaintext.setGeometry(QtCore.QRect(130, 100, 561, 131))
-        self.txtplaintext.setObjectName("txtplaintext")
-        self.txtcptext = QtWidgets.QPlainTextEdit(self.centralwidget)
-        self.txtcptext.setGeometry(QtCore.QRect(130, 280, 561, 131))
-        self.txtcptext.setObjectName("txtcptext")
-        self.btnsign = QtWidgets.QPushButton(self.centralwidget)
-        self.btnsign.setGeometry(QtCore.QRect(150, 440, 93, 28))
-        self.btnsign.setObjectName("btnsign")
-        self.btnverify = QtWidgets.QPushButton(self.centralwidget)
-        self.btnverify.setGeometry(QtCore.QRect(500, 440, 93, 28))
-        self.btnverify.setObjectName("btnverify")
-        self.btngenerate = QtWidgets.QPushButton(self.centralwidget)
-        self.btngenerate.setGeometry(QtCore.QRect(450, 20, 93, 28))
-        self.btngenerate.setObjectName("btngenerate")
+        self.txt_info = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.txt_info.setGeometry(QtCore.QRect(130, 100, 561, 131))
+        self.txt_info.setObjectName("txt_info")
+        self.txt_sign = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.txt_sign.setGeometry(QtCore.QRect(130, 280, 561, 131))
+        self.txt_sign.setObjectName("txt_sign")
+        self.btn_sign = QtWidgets.QPushButton(self.centralwidget)
+        self.btn_sign.setGeometry(QtCore.QRect(150, 440, 93, 28))
+        self.btn_sign.setObjectName("btn_sign")
+        self.btn_verify = QtWidgets.QPushButton(self.centralwidget)
+        self.btn_verify.setGeometry(QtCore.QRect(500, 440, 93, 28))
+        self.btn_verify.setObjectName("btn_verify")
+        self.btn_gen_keys = QtWidgets.QPushButton(self.centralwidget)
+        self.btn_gen_keys.setGeometry(QtCore.QRect(450, 20, 93, 28))
+        self.btn_gen_keys.setObjectName("btn_gen_keys")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -65,9 +64,9 @@ class Ui_MainWindow(object):
         self.label.setText(_translate("MainWindow", "ECC CIPHER"))
         self.label_2.setText(_translate("MainWindow", "Information:"))
         self.label_3.setText(_translate("MainWindow", "Signature:"))
-        self.btnsign.setText(_translate("MainWindow", "Sign"))
-        self.btnverify.setText(_translate("MainWindow", "Verify"))
-        self.btngenerate.setText(_translate("MainWindow", "Generate keys"))
+        self.btn_sign.setText(_translate("MainWindow", "Sign"))
+        self.btn_verify.setText(_translate("MainWindow", "Verify"))
+        self.btn_gen_keys.setText(_translate("MainWindow", "Generate keys"))
 
 
 if __name__ == "__main__":

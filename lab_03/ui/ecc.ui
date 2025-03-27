@@ -60,7 +60,7 @@
      <string>Signature:</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="txtplaintext">
+   <widget class="QPlainTextEdit" name="txt_info">
     <property name="geometry">
      <rect>
       <x>130</x>
@@ -70,7 +70,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="txtcptext">
+   <widget class="QPlainTextEdit" name="txt_sign">
     <property name="geometry">
      <rect>
       <x>130</x>
@@ -80,7 +80,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnsign">
+   <widget class="QPushButton" name="btn_sign">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -93,7 +93,7 @@
      <string>Sign</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnverify">
+   <widget class="QPushButton" name="btn_verify">
     <property name="geometry">
      <rect>
       <x>500</x>
@@ -106,7 +106,7 @@
      <string>Verify</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btngenerate">
+   <widget class="QPushButton" name="btn_gen_keys">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -126,7 +126,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
